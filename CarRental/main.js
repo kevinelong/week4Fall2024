@@ -21,11 +21,11 @@ function getReceipt(days, wantsToll, wantsGPS, wantsRoadSide, isUnderAge) {
 
     const grandTotal = (carRental + optionsSubtotal + surchargeAmount).toFixed(2);
     return `
-        Car rental: ${carRental}
-           Options: ${optionsSubtotal}
-Under 25 surcharge: ${surchargeAmount}
+        Car rental: $${carRental.toFixed(2)}
+           Options: $${optionsSubtotal.toFixed(2)}
+Under 25 surcharge: $${surchargeAmount.toFixed(2)}
 
-         Total Due: ${grandTotal}
+         Total Due: $${grandTotal}
     `;
 }
 document.addEventListener("DOMContentLoaded", () => {
