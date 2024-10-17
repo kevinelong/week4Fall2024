@@ -28,9 +28,9 @@ function getReceipt(
     const totalDue = total + taxAmount;
     return `
     <table>
-    <tr><th>Base Price:</th><td>$${total.toFixed(2)}</td></tr> 
-        <tr><th>Tax:</th><td>$${taxAmount.toFixed(2)}</td></tr>
-        <tr><th>Total Due:</th><td>$${totalDue.toFixed(2)}</td></tr>
+        <tr><th>Base Price:</th> <td>$${total.toFixed(2)}</td></tr> 
+        <tr><th>Tax:</th>        <td>$${taxAmount.toFixed(2)}</td></tr>
+        <tr><th>Total Due:</th>  <td>$${totalDue.toFixed(2)}</td></tr>
     </table>
 `;
 }
