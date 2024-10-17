@@ -11,3 +11,9 @@ label{
     display: inline-block;
     white-space: nowrap;
 }
+td{
+    text-align: right;
+}
+th{
+    text-align: left;
+}

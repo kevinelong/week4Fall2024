@@ -27,10 +27,12 @@ function getReceipt(
     const taxAmount = total * taxRate;
     const totalDue = total + taxAmount;
     return `
-        Base Price:$${total.toFixed(2)} 
-        Tax: $${taxAmount.toFixed(2)}
-        Total Due: $${totalDue.toFixed(2)}
-    `;
+    <table>
+    <tr><th>Base Price:</th><td>$${total.toFixed(2)}</td></tr> 
+        <tr><th>Tax:</th><td>$${taxAmount.toFixed(2)}</td></tr>
+        <tr><th>Total Due:</th><td>$${totalDue.toFixed(2)}</td></tr>
+    </table>
+`;
 }
 function onContainerClicked(e) {
     toppings.style.display = cup.checked ? "block" : "none";
@@ -49,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cone.addEventListener("click", onContainerClicked);
 
     submitOrder.addEventListener("click", () => {
-        outputReceipt.innerText = getReceipt(
+        outputReceipt.innerHTML = getReceipt(
             Number(scoops.value),
             cup.checked,
             sprinkles.checked,
